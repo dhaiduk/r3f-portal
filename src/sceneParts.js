@@ -50,15 +50,15 @@ const sceneParts = ({ name, updateCtx }) => {
   const refelevatorgroup = useRef();
   const myMesh = useRef();
   const viddRef = useRef();
-  const floor = useStore(state => state.floor);
-  const doorOpener = useStore(state => state.doorOpener);
-  const raiser = useStore(state => state.triggerRaiser);
+  const floor = useStore((state) => state.floor);
+  const doorOpener = useStore((state) => state.doorOpener);
+  const raiser = useStore((state) => state.triggerRaiser);
   const { modelNum } = useStore();
   const {
     hasFirstPlacement,
     floorClickedX,
     floorClickedY,
-    floorClickedZ
+    floorClickedZ,
   } = useStore();
 
   const [mytextX, setMyTextX] = useState("");
@@ -96,7 +96,7 @@ const sceneParts = ({ name, updateCtx }) => {
       <group visible={GenTools.ParamsGet("portal")} name="FOR-DEBUG">
         <group name="wireframebox">
           <Box color={"blue"}>
-            <meshBasicMaterial ref={myMesh} wireframe color="white" />
+            <meshBasicMaterial ref={myMesh} wireframe color="blue" />
           </Box>
         </group>
         {/* <group style={{ color: "blue", "font-weght": 400 }} name="drietexts">
@@ -178,7 +178,8 @@ const sceneParts = ({ name, updateCtx }) => {
         {GenTools.ParamsGet("portal") === "a" && (
           <group
             ref={refelevatorgroup}
-            position={[0, -1.5, 0]}
+            position={[0,-.02, 0]}
+            scale={[0.045, 0.08, 0.045]}
             rotation={[0, Math.PI / 2, 0]}
           >
             <Elevator />
