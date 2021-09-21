@@ -28,20 +28,22 @@ State management:  Uses zustand (by creator of R3F).  Look here: ```import useSt
 ###  To Get up and running locally
 
 ```
-npm run build
+yarn install (preferred to npm install)
+npm run build 
 ```
 Then:  Serve the build folder over https with your preferred tool.
 
 ... or you can use zapworks handy tool 'zapworks serve --lan' on the build folder.  To do that, run ```npm run serve``` then access https://192.168.1.64:8080 on your phone, or scan the handy QR code it produces.
 
+### Different Portals:  
+For tdebugging, two portals were used.  To change to the 'bad quality' portal, add portal=a to the url like: https://192.168.1.64:8080/?onscreen=y&portal=a
+This will make it easy to swap models and better testing of measurements.  
 
 ### TODO:  
 - Publish to URL:  Is it possible to publish (the build folder here) to a whitelist destination URL ?  That would be very useful to know if Android/ iOs status outside of local server.
 - Video green screen removal
 - iPhone iOs server/https issue
-- Better World Tracking 
+- Better World Tracking (bug fix required)
 
-### Then....
-- Setup correct audio and animations timings for doors and buttons when assets ready, it's done in the GLB files themselves.
- 
+
 
