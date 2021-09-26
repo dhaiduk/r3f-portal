@@ -16,7 +16,7 @@ const use8thWall = (appKey, canvas, ) => {
                     const { XR8 } = window;
                     window.THREE = THREE;
 
-                    XR8.xrController().configure({ disableWorldTracking: false });
+                    XR8.XrController().configure({ disableWorldTracking: false });
                     XR8.addCameraPipelineModules([
                         XR8.GlTextureRenderer.pipelineModule(),
                         XR8.XrController.pipelineModule(),

@@ -154,7 +154,7 @@ const XR3F = ({ name, updateCtx }) => {
     if (hasFirstPlacement) {
       return;
     } else {
-      XR8.xrController().recenter();
+      XR8.XrController().recenter();
       setFirstPlacement(true);
       hasPlacedRoutine();
       thepopNoise();
